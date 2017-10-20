@@ -18,9 +18,7 @@
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
     "react": "^16.0.0",
-    "serve-favicon": "~2.4.5"
-  },
-  "devDependencies": {
+    "serve-favicon": "~2.4.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-preact": "^1.1.0",
