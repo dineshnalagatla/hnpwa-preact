@@ -2,11 +2,11 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     // configuration
-    context: __dirname,
-    entry: "./hnpwa.js",
+    context: __dirname+'/src',
+    entry: './hnpwa.js',
     output: {
-        path: __dirname + "/public/dist",
-        filename: "index.js"
+        path: __dirname + '/../public/dist',
+        filename: 'index.js'
     },
     resolve: {
         extensions: ['.jsx', '.js'],
@@ -19,18 +19,18 @@ module.exports = {
         loaders: [
             {
                 test: /\.(png|jpg|gif|wav|html|svg|ttf|woff|eot)$/,
-                loader: "file-loader?name=[name].[ext]"
+                loader: 'file-loader?name=[name].[ext]'
             },
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract({
                     use: [{
-                        loader: "css-loader"
+                        loader: 'css-loader'
                     }, {
-                        loader: "less-loader"
+                        loader: 'less-loader'
                     }],
                     // use style-loader in development
-                    fallback: "style-loader"
+                    fallback: 'style-loader'
                 })
             },
             {
@@ -44,6 +44,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin('styles.css')
     ]
 };
