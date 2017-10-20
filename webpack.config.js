@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname+'/src',
     entry: './hnpwa.js',
     output: {
-        path: __dirname + '/../public/dist',
+        path: __dirname + '/public/dist',
         filename: 'index.js'
     },
     resolve: {
