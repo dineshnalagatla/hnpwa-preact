@@ -3,7 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     // configuration
     context: __dirname+'/src',
-    entry: './hnpwa.js',
+    entry: './hnpwa.jsx',
     output: {
         path: __dirname + '/public/dist',
         filename: 'index.js'
