@@ -1,3 +1,4 @@
+require("./style/app.less");
 import App from './views/app';
 import ReactDOM from 'react-dom';
 import React from 'react';
