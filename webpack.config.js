@@ -1,12 +1,16 @@
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     // configuration
     context: __dirname+'/src',
-    entry: './hnpwa.jsx',
+    entry: {
+        'dist/index': './hnpwa.jsx',
+        sw: './sw/sw.js'
+    },
     output: {
-        path: __dirname + '/public/dist',
-        filename: 'index.js'
+        path: __dirname + '/public/',
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['.jsx', '.js'],
@@ -44,6 +48,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('dist/styles.css')
     ]
 };
