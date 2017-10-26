@@ -12,7 +12,7 @@ var users = require('./routes/users');
 var app = express();
 
 //Build client side code
-exec('./node_modules/.bin/webpack', (err, stdout, stderr) => {
+exec('./node_modules/.bin/webpack -p', (err, stdout, stderr) => {
   if (err) {
     return;
   }
